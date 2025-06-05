@@ -1,6 +1,6 @@
-import React from "react";
-export default function News() {
-    return(
-        <h1>news</h1>
-    )
-}
+// src/pages/News.jsx
+const News = () => {
+  return <h1>School News</h1>;
+};
+
+export default News;

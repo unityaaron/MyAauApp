@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import Jobs from './pages/Jobs';
 import News from './pages/News';
 import Market from './pages/Market';
+// src/App.js
+import './App.css'; // ✅ This is enough
+
 
 const App = () => {
   return (

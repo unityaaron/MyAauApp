@@ -1,6 +1,6 @@
-import React from "react";
-export default function Jobs() {
-    return(
-        <h1>jobs</h1>
-    )
-}
+// src/pages/Jobs.jsx
+const Jobs = () => {
+  return <h1>Jobs & Scholarships</h1>;
+};
+
+export default Jobs;

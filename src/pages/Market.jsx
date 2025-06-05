@@ -1,6 +1,6 @@
-import React from "react";
-export default function Market() {
-    return(
-        <h1>market</h1>
-    )
-}
+// src/pages/Market.jsx
+const Market = () => {
+  return <h1>Buy & Sell</h1>;
+};
+
+export default Market;
