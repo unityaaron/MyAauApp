@@ -30,6 +30,8 @@ body {
 .content {
   background-color: white;
   padding: 20px;
+  border: 10px solid red;
+  min-height: 200px;
 }
 
 .title {
@@ -96,21 +98,32 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;}
+  justify-content: center;
+  color: white;}
+
+  .active {
+  color: yellow;
+  font-weight: bold;
+  border-bottom: 2px solid yellow;
+}
+
 
   /* Sidebar and overlay styles */
+/* Sidebar and overlay styles */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -100%; /* hidden by default */
-  width: 250px;
-  height: 100%;
+  left: -250px; /* hidden by default */
+  width: 100px;
+  height: 100%; /* FIXED: full height */
   background-color: white;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease;
   padding: 20px;
   z-index: 1000;
+  box-sizing: border-box;
 }
+
 
 .sidebar.open {
   left: 0; /* slides in from left */
