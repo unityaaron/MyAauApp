@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import Jobs from './pages/Jobs';
 import News from './pages/News';
 import Market from './pages/Market';
+import GST101Page from './pages/gst101';
+import GST102Page from './pages/gst102'
 // src/App.js
 import './App.css'; // ✅ This is enough
 
@@ -19,7 +21,9 @@ const App = () => {
           <Route path="/jobs" element={<Jobs />} />
           <Route path="/news" element={<News />} />
           <Route path="/market" element={<Market />} />
-        </Route>
+          <Route path="/gst101" element={<GST101Page />} />
+          <Route path="/gst102" element={<GST102Page />} /> 
+        </Route> 
       </Routes>
     </Router>
   );
