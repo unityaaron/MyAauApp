@@ -10,6 +10,10 @@ import GST101Page from './pages/gst101';
 import GST102Page from './pages/gst102'
 // src/App.js
 import './App.css'; // ✅ This is enough
+import ProfilePage from './pages/ProfilePage';
+import SettingsPage from './pages/SettingsPage';
+import MorePage from './pages/MorePage';
+
 
 
 const App = () => {
@@ -23,6 +27,10 @@ const App = () => {
           <Route path="/market" element={<Market />} />
           <Route path="/gst101" element={<GST101Page />} />
           <Route path="/gst102" element={<GST102Page />} /> 
+          <Route path="/profile" element={<ProfilePage />} />
+          <Route path="/settings" element={<SettingsPage />} />
+          <Route path="/more" element={<MorePage />} />
+
         </Route> 
       </Routes>
     </Router>

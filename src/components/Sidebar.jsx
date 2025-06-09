@@ -1,17 +1,17 @@
 // src/components/Sidebar.js
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   return (
     <>
-      <div className={`overlay ${isOpen ? 'show' : ''}`} onClick={toggleSidebar}></div>
+      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <span className="close-btn" onClick={toggleSidebar}>×</span>
-        <h3>Menu</h3>
-        <ul>
-          <li>Profile</li>
-          <li>Settings</li>
-          <li>More</li>
+        <div className="close-btn" onClick={toggleSidebar}>×</div>
+        <ul style={{ listStyle: 'none', padding: '0 20px' }}>
+          <li><Link to="/profile" onClick={toggleSidebar}>👤 Profile</Link></li>
+          <li><Link to="/settings" onClick={toggleSidebar}>⚙️ Settings</Link></li>
+          <li><Link to="/more" onClick={toggleSidebar}>➕ More</Link></li>
         </ul>
       </div>
     </>
