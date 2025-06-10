@@ -9,9 +9,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
       <div className={`sidebar ${isOpen ? 'open' : ''}`}>
         <div className="close-btn" onClick={toggleSidebar}>×</div>
         <ul style={{ listStyle: 'none', padding: '0 20px' }}>
-          <li><Link to="/profile" onClick={toggleSidebar}>👤 Profile</Link></li>
-          <li><Link to="/settings" onClick={toggleSidebar}>⚙️ Settings</Link></li>
-          <li><Link to="/more" onClick={toggleSidebar}>➕ More</Link></li>
+          <li><Link to="/profile" style={{textDecoration:'none', color:'inherit'}} onClick={toggleSidebar}>👤 Profile</Link></li>
+          <li><Link to="/settings" style={{textDecoration: 'none', color:'inherit'}} onClick={toggleSidebar}>⚙️ Settings</Link></li>
+          <li><Link to="/more" style={{textDecoration:'none', color:'inherit'}} onClick={toggleSidebar}>➕ More</Link></li>
         </ul>
       </div>
     </>

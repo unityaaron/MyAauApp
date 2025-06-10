@@ -9,7 +9,7 @@ const BottomNav = () => {
         <span role="img" aria-label="Home">🏠</span>
         Home
       </NavLink>
-      <NavLink to="/jobs" className = {({isActive}) => isActive ? 'nav-item active':'nav-item'}>
+      <NavLink to="/jobsandscholarships" className = {({isActive}) => isActive ? 'nav-item active':'nav-item'}>
         <span role="img" aria-label="Jobs">🎓</span>
         Jobs & Scholarships
       </NavLink>
