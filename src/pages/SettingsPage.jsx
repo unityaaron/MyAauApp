@@ -51,6 +51,7 @@ const SettingsPage = () => {
 
   return (
     <div className="content">
+      <h1>WE WOULD CHANGE THIS PAGE LATER BY USING BACKEND NOTIFICATIONS</h1>
       <h2>Settings</h2>
 
       {/* Reminders Toggle with Checkbox */}
