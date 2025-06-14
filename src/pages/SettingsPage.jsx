@@ -1,84 +1,90 @@
-// src/pages/SettingsPage.js
 import React, { useState, useEffect } from 'react';
 
-const SETTINGS_KEY = 'myAppSettings'; // A unique key for your app's settings in local storage
-
 const SettingsPage = () => {
-  // Initialize state based on local storage or defaults
-  const [settings, setSettings] = useState(() => {
-    try {
-      const storedSettings = localStorage.getItem(SETTINGS_KEY);
-      return storedSettings ? JSON.parse(storedSettings) : {
-        notificationsEnabled: true,
-        currentTheme: 'Light',
-      };
-    } catch (error) {
-      console.error("Error parsing settings from local storage:", error);
-      // Fallback to default settings if there's an error parsing
-      return {
-        notificationsEnabled: true,
-        currentTheme: 'Light',
-      };
-    }
-  });
+  // Set the theme from localStorage or use "light"
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
-  // Use useEffect to save settings to local storage whenever they change
+  // Set reminders from localStorage (convert string to true/false)
+  const [remindersOn, setRemindersOn] = useState(
+    localStorage.getItem("reminders") === "true"
+  );
+
+  // Ask permission once when component loads
   useEffect(() => {
-    try {
-      localStorage.setItem(SETTINGS_KEY, JSON.stringify(settings));
-      console.log("Settings saved to local storage:", settings);
-    } catch (error) {
-      console.error("Error saving settings to local storage:", error);
+    if (Notification.permission !== 'granted') {
+      Notification.requestPermission();
     }
-  }, [settings]); // This effect runs whenever the 'settings' state object changes
+  }, []);
 
-  // Event Handlers to update state and trigger save (via useEffect)
-  const handleNotificationsToggle = () => {
-    setSettings(prevSettings => ({
-      ...prevSettings,
-      notificationsEnabled: !prevSettings.notificationsEnabled,
-    }));
+  // This checks every minute to see if it's 8:00 PM
+  useEffect(() => {
+    const checkReminder = setInterval(() => {
+      const now = new Date();
+      if (
+        now.getHours() === 20 &&
+        now.getMinutes() === 0 &&
+        remindersOn &&
+        Notification.permission === "granted"
+      ) {
+        new Notification("🧠 Time to Study!", {
+          body: "Open your AAU GST app and revise now!",
+        });
+      }
+    }, 60000); // every 60 seconds
+
+    return () => clearInterval(checkReminder); // stop when not needed
+  }, [remindersOn]);
+
+  // Turn reminders ON or OFF
+  const toggleReminders = () => {
+    const newValue = !remindersOn;
+    setRemindersOn(newValue);
+    localStorage.setItem("reminders", newValue);
   };
 
-  const handleThemeToggle = () => {
-    setSettings(prevSettings => ({
-      ...prevSettings,
-      currentTheme: prevSettings.currentTheme === 'Light' ? 'Dark' : 'Light',
-    }));
+  // Change theme between light and dark
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
   };
 
   return (
     <div className="content">
       <h2>Settings</h2>
 
-      {/* Notifications Setting */}
-      <div style={{ marginBottom: '15px' }}>
-        <label>
+      {/* Reminders Toggle with Checkbox */}
+      <div style={{ marginBottom: '20px' }}>
+        <label style={{ fontSize: '18px' }}>
           <input
             type="checkbox"
-            checked={settings.notificationsEnabled}
-            onChange={handleNotificationsToggle}
+            checked={remindersOn}
+            onChange={toggleReminders}
+            style={{ marginRight: '10px' }}
           />
-          Notifications: {settings.notificationsEnabled ? 'ON' : 'OFF'}
+          ⏰ Study Reminders: {remindersOn ? 'ON (8:00 PM)' : 'OFF'}
         </label>
       </div>
 
-      {/* Theme Setting */}
-      <div style={{ marginBottom: '15px' }}>
-        <p>
-          Theme: {settings.currentTheme}
+      {/* Theme Toggle Button */}
+      <div>
+        <p style={{ fontSize: '18px' }}>
+          🌗 Theme: {theme === "light" ? "Light" : "Dark"}
           <button
-            onClick={handleThemeToggle}
-            style={{ marginLeft: '10px', padding: '5px 10px', cursor: 'pointer' }}
+            onClick={toggleTheme}
+            style={{
+              marginLeft: '10px',
+              padding: '5px 10px',
+              cursor: 'pointer',
+              borderRadius: '6px',
+              border: '1px solid gray',
+              backgroundColor: '#f0f0f0',
+            }}
           >
             Toggle Theme
           </button>
         </p>
       </div>
-
-      <p style={{ marginTop: '30px', fontStyle: 'italic', color: '#888' }}>
-        (Settings are now saved automatically to your browser's local storage!)
-      </p>
     </div>
   );
 };
