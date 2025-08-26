@@ -4,18 +4,18 @@
 
 | React-Native Login Page | React-Native Home Page |
 | :---: | :---: |
-| ![Login Page Screenshot](https://github.com/unityaaron/MyUniStudyApp/assets/65918712/e5e8e894-31e8-4235-857e-3754964177eb) | ![Home Page Screenshot](https://github.com/unityaaron/MyUniStudyApp/assets/65918712/1c97047f-8c31-40c2-9e86-161b9a1d9571) |
+| ![Login Page Screenshot](MyAauApp\images\react-native_login_page.png) | ![Home Page Screenshot](MyAauApp\images\react-native_homepage.png) |
 
 | React-Native Quiz Page | React-Native About Page |
 | :---: | :---: |
-| ![Quiz Page Screenshot](https://github.com/unityaaron/MyUniStudyApp/assets/65918712/612711d5-9195-45c1-8408-54b2d56d4986) | ![About Page Screenshot](https://github.com/unityaaron/MyUniStudyApp/assets/65918712/e13f283d-e25f-4f81-8071-70014a01c40b) |
+| ![Quiz Page Screenshot](MyAauApp\images\react-native_app_quiz_page.png) | ![About Page Screenshot](MyAauApp\images\react-native_aboutpage.png) |
 
 
 ### Cloud Deployment Screenshots
 
 | Cloud Deployment of React Frontend, Django Backend & Postgresql | Live Cloud Deployment |
 | :---: | :---: |
-| ![Cloud Deployment of React Frontend, Django Backend & Postgresql](https://github.com/unityaaron/MyUniStudyApp/assets/65918712/f6227920-f5a0-4a6c-9226-e179e0f6c240) | ![Live Cloud Deployment](https://github.com/unityaaron/MyUniStudyApp/assets/65918712/a1b5d63f-9169-4251-897c-473d09a0614a) |
+| ![Cloud Deployment of React Frontend, Django Backend & Postgresql](MyAauApp\images\cloud_deployed_frontend_djangobackend_postgresqlbackend.png) | ![Live Cloud Deployment](MyAauApp\images\live_cloud_deployment.png) |
 
 **Project Summary**
 
