@@ -4,18 +4,18 @@
 
 | React-Native Login Page | React-Native Home Page |
 | :---: | :---: |
-| ![Login Page Screenshot](MyAauApp\images\react-native_login_page.png) | ![Home Page Screenshot](MyAauApp\images\react-native_homepage.png) |
+| ![Login Page Screenshot](MyAauApp/images/react-native_login_page.png) | ![Home Page Screenshot](MyAauApp/images/react-native_homepage.png) |
 
 | React-Native Quiz Page | React-Native About Page |
 | :---: | :---: |
-| ![Quiz Page Screenshot](MyAauApp\images\react-native_app_quiz_page.png) | ![About Page Screenshot](MyAauApp\images\react-native_aboutpage.png) |
+| ![Quiz Page Screenshot](MyAauApp/images/react-native_app_quiz_page.png) | ![About Page Screenshot](MyAauApp/images/react-native_aboutpage.png) |
 
 
 ### Cloud Deployment Screenshots
 
 | Cloud Deployment of React Frontend, Django Backend & Postgresql | Live Cloud Deployment |
 | :---: | :---: |
-| ![Cloud Deployment of React Frontend, Django Backend & Postgresql](MyAauApp\images\cloud_deployed_frontend_djangobackend_postgresqlbackend.png) | ![Live Cloud Deployment](MyAauApp\images\live_cloud_deployment.png) |
+| ![Cloud Deployment of React Frontend, Django Backend & Postgresql](MyAauApp/images/cloud_deployed_frontend_djangobackend_postgresqlbackend.png) | ![Live Cloud Deployment](MyAauApp/images/live_cloud_deployment.png) |
 
 **Project Summary**
 
