@@ -4,7 +4,7 @@
 
 | React-Native Login Page | React-Native Home Page |
 | :---: | :---: |
-| ![Login Page Screenshot](MyAauApp/images/react-native_login_page.png) | ![Home Page Screenshot](MyAauApp/images/react-native_homepage.png) |
+| ![Login Page Screenshot](images/react-native_login_page.png) | ![Home Page Screenshot](MyAauApp/images/react-native_homepage.png) |
 
 | React-Native Quiz Page | React-Native About Page |
 | :---: | :---: |
