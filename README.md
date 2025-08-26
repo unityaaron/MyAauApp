@@ -1,4 +1,4 @@
-# AAU GST App: A Full-Stack Web & Mobile Platform
+# myUniStudy App: A Full-Stack Web & Mobile Platform
 
 ### App Screenshots
 
@@ -19,7 +19,7 @@
 
 **Project Summary**
 
-The AAU GST App is a modern, student-focused platform designed to streamline campus life at Ambrose Alli University. It provides essential services like secure user authentication, a dynamic buy-and-sell marketplace, and an educational quiz module for GST (General Studies) courses and other first-year courses. The project is a full-stack application consisting of a cross-platform mobile app (built with React Native) and a single-page web application (built with React), both powered by a unified Django backend API. This entire platform has been successfully deployed and is live in the cloud.
+The myUniStudy App is a modern, student-focused platform designed to streamline campus life at Ambrose Alli University. It provides essential services like secure user authentication, a dynamic buy-and-sell marketplace, and an educational quiz module for GST (General Studies) courses and other first-year courses. The project is a full-stack application consisting of a cross-platform mobile app (built with React Native) and a single-page web application (built with React), both powered by a unified Django backend API. This entire platform has been successfully deployed and is live in the cloud.
 
 **Recruiter TL;DR**
 
@@ -62,7 +62,7 @@ As a Solo-Developer, I built a real, full-stack, cross-platform application with
 
 ### Live Deployment
 
-**The AAU GST App is now live!** You can access the live version of the web application and its backend API.
+**The myUniStudy App is now live!** You can access the live version of the web application and its backend API.
 
 * **Live Web App:** `https://myuni-studyapp.onrender.com`
 * **Live Backend API:** `https://myaauapp-backend.onrender.com`
